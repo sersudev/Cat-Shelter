@@ -15,12 +15,10 @@ public class Shelter {
     void findHungriestCat() {
         int maxLevelOfHunger = cats.get(0).getHungerLevel();
         int sumOfHungerLevel = 0;
-        boolean flag = false;
         for (Cat x: cats) {
             sumOfHungerLevel += x.getHungerLevel();
             if (x.getHungerLevel() > maxLevelOfHunger) {
                 maxLevelOfHunger = x.getHungerLevel();
-                flag = true;
             }
         }
         if (sumOfHungerLevel == 0) {
